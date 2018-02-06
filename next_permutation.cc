@@ -1,3 +1,4 @@
+/*这两个模板类是 计算下一个 以及上一个 字典序的 通用方法*/
 #include <vector>
 #include <iostream>
 #include <algorithm>
