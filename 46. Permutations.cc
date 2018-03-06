@@ -12,6 +12,7 @@ For example,
   [3,2,1]
 ]
 */
+
 #include <iostream>
 #include <algorithm>
 
@@ -25,7 +26,7 @@ next-permutation
 
 */
 
-class Solution {
+class Solution1 {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
         
@@ -40,3 +41,45 @@ public:
     	return mul;
     }
 };
+class Solution {
+public:
+    vector<vector<int>> permute(vector<int>& nums) {
+		
+		vector<vector<int>> re;
+		if(nums.empty())
+			return re;
+		
+		permutation(re, nums, 0);
+
+		return re;
+    }
+	
+	void  permutation(vector<vector<int>>& re, vector<int>& nums, int pos)
+	{
+		if(pos == nums.size())
+		{
+			re.push_back(nums);
+		}
+
+		for(int i=pos; i<nums.size(); ++i)
+		{
+			swap(nums[i], nums[pos]);
+			permutation(re, nums, pos+1);
+			swap(nums[i], nums[pos]);
+		}
+	}
+};
+
+int main()
+{
+	vector<int> nums{1,2,3};
+	Solution a;
+	auto re  = a.permute(nums);
+
+	for(const auto& i: re)
+	{
+		for(const auto& j : i)
+			cout<<j<<" ";
+		cout<<endl;
+	}
+}

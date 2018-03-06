@@ -1,13 +1,3 @@
-/*
-Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2.
-
-Note:
-
-The length of both num1 and num2 is < 110.
-Both num1 and num2 contains only digits 0-9.
-Both num1 and num2 does not contain any leading zero.
-You must not use any built-in BigInteger library or convert the inputs to integer directly.
-*/
 #include <vector>
 #include <iostream>
 #include <string>
@@ -47,8 +37,10 @@ public:
     	}
     	if(carry != 0)
     		{
-    			string a(1,'0'+carry);
-    			mul =a+mul;
+    		/*	string a(1,'0'+carry);
+    			mul =a+mul;*/
+    			mul.insert(mul.begin(), '0'+carry);		//这里千万记住 加了insert 之后的迭代器 会变得无效 ！！！！、
+    		
     		}
     	auto i = mul.begin();
     	for(; i!= mul.end(); ++i)

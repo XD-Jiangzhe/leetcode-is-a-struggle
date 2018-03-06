@@ -1,16 +1,3 @@
-/*
-Given an array of strings, group anagrams together.
-
-For example, given: ["eat", "tea", "tan", "ate", "nat", "bat"], 
-Return:
-
-[
-  ["ate", "eat","tea"],
-  ["nat","tan"],
-  ["bat"]
-]
-Note: All inputs will be in lower-case.
-*/
 #include <vector>
 #include <iostream>
 #include <algorithm>
@@ -69,7 +56,7 @@ class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         
-    	map<string, multiset<string>> dict;		//这里 mulitset 已经对 string 进行了排序
+    	map<string, multiset<string>> dict;		//这里 mulitset 已经对 string 进行了排序,然后一个 字典对应了一系列 字符串 真的厉害。。。自己谢了一堆垃圾代码 。。。。
     	for(string s: strs)
     	{
     		string temp =s;

@@ -1,27 +1,5 @@
 /*
-You are given an n x n 2D matrix representing an image.
-
-Rotate the image by 90 degrees (clockwise).
-
-Note:
-You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
-
-Example 1:
-
-Given input matrix = 
-[
-  [1,2,3],
-  [4,5,6],
-  [7,8,9]
-],
-
-rotate the input matrix in-place such that it becomes:
-[
-  [7,4,1],
-  [8,5,2],
-  [9,6,3]
-]
-将一个矩阵 顺时针 旋转 90 度， 可以先将 所有的元素根据竖对象线 进行翻转，即reverse 操作，然后 再根据正斜对角线进行变化，即可得到 顺时针 旋转90度之后的矩阵 
+	将一个矩阵 顺时针 旋转 90 度， 可以先将 所有的元素翻转，即reverse 操作，然后 再根据正斜对角线进行变化，即可得到 顺时针 旋转90度之后的矩阵 
 */
 
 #include <vector>
